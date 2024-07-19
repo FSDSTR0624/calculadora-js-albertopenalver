@@ -1,0 +1,112 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #525252;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#calculadora {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    
+}
+
+#screen {
+    width: 100%;
+    height: 50px;
+    background-color: #525252;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 1.5em;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: 'Calculator', sans-serif;
+    font-weight: bold;
+}
+/* Estilo para cuando la calculadora está encendida */
+.pantallaEncendida #screen {
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.4); /* Borde luminoso verde con difuminado */
+}
+
+/* Estilo para cuando la calculadora está apagada */
+.pantallaApagada #screen {
+    box-shadow: none; /* Sin borde luminoso cuando está apagada */
+}
+
+#botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
+    padding-top: 40px;
+    gap: 10px;
+}
+#botones2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 60px);
+    gap: 10px;
+}
+
+.boton {
+    width: 100%;
+    height: 50px;
+    background-color: #5a5a5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.quitar {
+    grid-column: 2/3;
+}
+.limpiar{
+    grid-column: 1/2;
+}
+.encendido-apagado{
+    grid-column: 4/5;
+}
+
+
+.operador {
+    background-color: rgb(255, 166, 0);
+}
+.operador:hover {
+    background-color: rgb(255, 224, 87);
+}
+
+.numero {
+    background-color: #414141;
+}
+.numero:hover {
+    background-color: #616161;
+}
+
+.diferente{
+    background-color:#5a5a5a;
+}
+.diferente:hover{
+    background-color:#969696;
+}
+.encendido-apagado{
+    border-radius:50% ;
+    background-color: rgb(207, 94, 50);
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    width: 60px;
+}
+.encendido-apagado:hover{
+    background-color: rgb(206, 126, 94);
+}
