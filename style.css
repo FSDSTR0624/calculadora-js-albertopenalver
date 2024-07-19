@@ -1,5 +1,4 @@
 
-
 body {
     display: flex;
     justify-content: center;
@@ -34,16 +33,14 @@ body {
     font-family: 'Calculator', sans-serif;
     font-weight: bold;
 }
-/* Estilo para cuando la calculadora está encendida */
+
 .pantallaEncendida #screen {
-    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.4); /* Borde luminoso verde con difuminado */
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.4);
 }
 
-/* Estilo para cuando la calculadora está apagada */
 .pantallaApagada #screen {
-    box-shadow: none; /* Sin borde luminoso cuando está apagada */
+    box-shadow: none; 
 }
-
 #botones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
