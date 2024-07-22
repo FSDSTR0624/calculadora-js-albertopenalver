@@ -8,16 +8,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
-
 #calculadora {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
-    
 }
-
 #screen {
     width: 100%;
     height: 50px;
@@ -33,9 +30,8 @@ body {
     font-family: 'Calculator', sans-serif;
     font-weight: bold;
 }
-
 .pantallaEncendida #screen {
-    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.4);
+    box-shadow: inset 0 0 10px rgba(60, 255, 0, 0.4);
 }
 
 .pantallaApagada #screen {
@@ -54,7 +50,6 @@ body {
     grid-template-rows: repeat(4, 60px);
     gap: 10px;
 }
-
 .boton {
     width: 100%;
     height: 50px;
@@ -75,22 +70,18 @@ body {
 .encendido-apagado{
     grid-column: 4/5;
 }
-
-
 .operador {
     background-color: rgb(255, 166, 0);
 }
 .operador:hover {
     background-color: rgb(255, 224, 87);
 }
-
 .numero {
     background-color: #414141;
 }
 .numero:hover {
     background-color: #616161;
 }
-
 .diferente{
     background-color:#5a5a5a;
 }

@@ -4,6 +4,7 @@ const pantalla = document.getElementById("screen");
 const calculadora = document.getElementById("calculadora");
 let primerNumero = "";
 let operador = "";
+let nuevoNumero =false;
 
 let calculadoraEncendida =false;
 
@@ -11,12 +12,9 @@ if(calculadoraEncendida === false){
     pantalla.value = "OFF"
 }
 
-
-
 function add(a, b) {
     return a + b;
 }
-
 
 function substract(a, b) {
     return a - b;
@@ -115,23 +113,26 @@ botones.forEach(function(boton) {
             if (boton.textContent === '.' && contenidoPantalla.includes('.')) {
                 return;
             }
-            if (contenidoPantalla === "0" && boton.textContent !== '.') {
+            if (nuevoNumero === true) {
                 pantalla.value = boton.textContent;
+                nuevoNumero = false;
             } else {
-                pantalla.value += boton.textContent;
+                if (contenidoPantalla === "0" && boton.textContent !== '.') {
+                    pantalla.value = boton.textContent;
+                } else {
+                    pantalla.value += boton.textContent;
+                }
             }
         } else if (boton.classList.contains('operador')) {
             if (operador !== "") {
                 calcularResultado();
+                pantalla.value = primerNumero;
             } else {
                 primerNumero = Number(pantalla.value);
+                pantalla.value = "";
             }
             operador = boton.textContent;
-          
-            pantalla.value = primerNumero;
-            setTimeout(() => {
-                pantalla.value = "";
-            }, 300); 
+            nuevoNumero = true;
         } else if (boton.textContent === '=') {
             calcularResultado();
             operador = ""; 
